@@ -6,26 +6,26 @@ const Info = () => {
         <label className="card border border-gray-300 bg-white ">
           <div className="card-body items-center">
             <h2 className="card-title  font-bold text-2xl">10</h2>
-            <p>Total friends</p>
+            <p className='text-gray-500'>Total friends</p>
           </div>
         </label>
 
         <label className="card border border-gray-300 bg-white ">
           <div className="card-body items-center">
             <h2 className="card-title font-bold text-2xl">3</h2>
-            <p>On Track</p>
+            <p className='text-gray-500'>On Track</p>
           </div>
         </label>
         <label className="card border border-gray-300 bg-white ">
           <div className="card-body items-center">
             <h2 className="card-title font-bold text-2xl">6</h2>
-            <p>Need Attention</p>
+            <p className='text-gray-500'>Need Attention</p>
           </div>
         </label>
         <label className="card border border-gray-300 bg-white">
           <div className="card-body items-center">
             <h2 className="card-title font-bold text-2xl">12</h2>
-            <p>Interactions this Month</p>
+            <p className='text-gray-500'>Interactions this Month</p>
           </div>
         </label>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Info from "./Info";
+import Friends from "./Friends";
 
 const Banner = () => {
   return (
@@ -19,6 +20,10 @@ const Banner = () => {
 
 
       <Info></Info>
+
+
+      <div className="divider"></div>
+      <Friends></Friends>
     </div>
   );
 };
