@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/comps/shared/navbar/Navbar";
 import { Suspense } from "react";
 import TimeLineProvider from "@/context/TimeLineProvider";
+import Footer from "@/comps/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
             <Navbar />
           </Suspense>
           {children}
+          <Footer></Footer>
         </TimeLineProvider>
       </body>
     </html>

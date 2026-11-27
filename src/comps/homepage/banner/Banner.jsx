@@ -14,13 +14,7 @@ const Banner = () => {
       </p>
       <button className="btn mt-6 bg-[#244d3f] text-white">+ Add Friend</button>
 
-
-
-
-
-
-      <Info></Info>
-
+      {/* <Info totalFriends={totalFriends}></Info> */}
 
       <div className="divider"></div>
       <Friends></Friends>
