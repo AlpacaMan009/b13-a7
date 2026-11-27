@@ -8,7 +8,10 @@ const loading = () => {
     <div className="flex justify-center items-center h-[60vh]">
       {/* <GridLoader color="#244D3F"></GridLoader> */}
 
-      <PacmanLoader color="##244D3F" />
+      {/* <PacmanLoader color="##244D3F" /> */}
+      
+      <span className="loading loading-spinner loading-lg text-[#244D3F]"></span>
+      
     </div>
   );
 };
