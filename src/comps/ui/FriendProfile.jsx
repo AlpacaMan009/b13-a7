@@ -16,12 +16,12 @@ const FriendProfile = ({ friend }) => {
 
 
   return (
-    <div className="flex flex-col md:flex-row mx-auto max-w-5xl mt-10 gap-6 p-4 items-stretch">
+    <div className="flex flex-col lg:flex-row mx-auto max-w-5xl mt-10 gap-6 p-4 items-stretch">
       {/* left column */}
-      <div className="flex flex-col gap-4 w-full md:w-[400px] pt-0">
+      <div className="flex flex-col gap-4 w-full lg:w-[400px] pt-0">
         <div
           key={friend.id}
-          className="card bg-base-100 w-[400px] h-[350px] shadow-sm"
+          className="card bg-base-100 w-full h-[350px] shadow-sm"
         >
           <figure className="mt-7">
             <Image
@@ -71,7 +71,7 @@ const FriendProfile = ({ friend }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 w-[400px] my-3 gap-2">
+        <div className="grid grid-cols-1 w-full my-3 gap-2">
           <button className="btn  md:btn-md lg:btn-lg ">
             <RiNotificationSnoozeLine />
             Snooze 2 Weeks
