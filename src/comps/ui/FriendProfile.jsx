@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useContext } from "react";
 import { FiArchive, FiMessageSquare, FiPhone, FiVideo } from "react-icons/fi";
 import { RiDeleteBin6Line, RiNotificationSnoozeLine } from "react-icons/ri";
+import { toast } from "react-toastify";
 
 const FriendProfile = ({ friend }) => {
   const { addEvent } = useContext(TimeLineContext);
@@ -12,6 +13,8 @@ const FriendProfile = ({ friend }) => {
   const handleAction = (type) => {
     console.log("Button clicked! Saving:", friend.name);
     addEvent(type, friend.name);
+
+    toast.success(`${type} with ${friend.name}`)
   };
 
 

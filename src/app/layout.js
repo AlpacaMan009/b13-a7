@@ -4,6 +4,8 @@ import Navbar from "@/comps/shared/navbar/Navbar";
 import { Suspense } from "react";
 import TimeLineProvider from "@/context/TimeLineProvider";
 import Footer from "@/comps/footer/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/ReactToastify.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +36,8 @@ export default function RootLayout({ children }) {
           </Suspense>
           {children}
           <Footer></Footer>
+
+          <ToastContainer></ToastContainer>
         </TimeLineProvider>
       </body>
     </html>
