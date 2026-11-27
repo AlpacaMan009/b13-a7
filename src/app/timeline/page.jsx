@@ -1,11 +1,18 @@
 "use client"
 
 import { TimeLineContext } from "@/context/TimeLineProvider";
-import React, { useCallback, useContext } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { FiMessageSquare, FiPhone, FiVideo } from "react-icons/fi";
 
 const TimeLinePage = () => {
   const { events } = useContext(TimeLineContext);
+
+  const [filterType, setFilterType] = useState("All")
+
+  const filteredEvents = events.filter((event) => {
+    if (filterType === "All") return true
+    return event.type === filterType
+  })
 
   console.log("tmieline events", events)
 
@@ -26,20 +33,26 @@ const TimeLinePage = () => {
       <h1 className="text-3xl font-bold text-gray-800 mb-6">Timeline</h1>
 
       <div className="mb-8">
-        <select className="select select-bordered w-48 text-gray-500 bg-white border-gray-300">
-          <option>Filter timeline</option>
+        <select 
+        value={filterType}
+        onChange={(e) => setFilterType(e.target.value)}
+        className="select select-bordered w-48 text-gray-500 bg-white border-gray-300">
+          <option value={"All"}>All</option>
+          <option value={"Call"}>Call</option>
+          <option value={"Text"}>Text</option>
+          <option value={"Video"}>Video</option>
         </select>
       </div>
 
 
       <div className="flex flex-col gap-4 w-full">
-        {events.length === 0 ? (
+        {filteredEvents.length === 0 ? (
           <div className="text-center p-10 bg-white border border-gray-200 rounded-lg shadow-sm">
             <p className="text-gray-500">No interactions yet.</p>
             <p className="text-sm text-gray-400 mt-2">Go to a friend's profile and click Call, Text, or Video!</p>
           </div>
         ) : (
-          events.map((event) => (
+          filteredEvents.map((event) => (
             <div 
               key={event.id} 
               className="card border border-gray-200 bg-white shadow-sm p-4 flex-row items-center gap-4"
