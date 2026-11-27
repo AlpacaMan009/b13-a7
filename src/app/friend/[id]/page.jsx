@@ -6,6 +6,8 @@ import friendsData from '@/data/data.json'
 
 
 
+
+
 const FriendsPage = async({params}) => {
     const {id} = await params
 

@@ -2,6 +2,8 @@
 
 KeenKeeper is a personal relationship management app designed to help you keep track of meaningful connections. Browse your friends, log your interactions, and visualize your communication habits to ensure no relationship is left behind.
 
+**[🔴 View Live Demo](https://b13-a7-keenkeeper.netlify.app/)** 
+
 ## 🚀 Features
 
 *   **Friend Directory:** Browse a grid of 12 different friends with their avatar, tags, and current relationship status (Overdue, Almost Due, On-Track).
